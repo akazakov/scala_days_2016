@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Coming in 2016](#coming-in-2016)
+  - [Scala 2.12](#scala-212)
+  - [Beyond 2.12](#beyond-212)
+  - [Other things coming in 2016](#other-things-coming-in-2016)
+  - [Dot: Dependent object tracking](#dot-dependent-object-tracking)
+      - [Why? Type Soundness:](#why-type-soundness)
+  - [Dotty:  a working name for the new scala compiler](#dotty--a-working-name-for-the-new-scala-compiler)
+    - [Why dotty important?](#why-dotty-important)
+    - [What is the scala "character"](#what-is-the-scala-character)
+    - [Goals of the further scala improvements](#goals-of-the-further-scala-improvements)
+    - [Dotty: Dropped features](#dotty-dropped-features)
+    - [Dotty: new fatures](#dotty-new-fatures)
+    - [Improvements in details](#improvements-in-details)
+    - [ADvances in tooling](#advances-in-tooling)
+  - [FUTURE!](#future)
+    - [Planned future](#planned-future)
+  - [What about the guardrails](#what-about-the-guardrails)
+  - [Read this](#read-this)
+    - [Flexibility: blessing or a curse?](#flexibility-blessing-or-a-curse)
+    - [Add alphanumeric for Symbolic operators](#add-alphanumeric-for-symbolic-operators)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Coming in 2016
 
 - scala 2.12
@@ -29,7 +56,10 @@
 - SCalaNative, more details later.
 - DOT and dotty
 
-## Dot: Dependent object tracking
+## Dot: Dependent object types
+
+[Read Martin's blog about
+DOT](http://www.scala-lang.org/blog/2016/02/03/essence-of-scala.html)
 
 Finally have proven foundation for Scala. DOT calculus talks about a minimal
 language subset that:
@@ -196,11 +226,11 @@ Opens the door to language work with much better confidence in the future.
 - What if they don't?
 - Can we agree on what the right thing is?
 
-## Read this
+### Scala style
 
-- Strategic scala style: [Principle of least
-  power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
-  - use the least powerful language feature to achieve the thing
+- Strategic scala style: [Principle of least power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
+
+  > use the least powerful language feature to achieve the thing
 
 - Make implicit conversion (from A to B) a style error if:
   - not defined in package containing A or B
