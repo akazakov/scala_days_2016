@@ -9,20 +9,20 @@
 
 - Optimized for Java 8
 - 33 new features
-- Programming in scala third ed updated for 2.12
+- Programming in Scala third ed updated for 2.12
 
 ## Beyond 2.12
 
 - focus on libraries
 - study ways to revamp the collections
-  - strawman proposals under study
+  - straw-man proposals under study
   - collect ideas and prototype solution
-  - give nicer apis
+  - give nicer APIs
 - better modularization: current binary is a big blob
 - thinking about split:
   scala stdlib -> scala core and scala platform
 - scala core: minimal
-- scala platform: a bigger than current stdlib
+- Scala platform: a bigger than current stdlib
 
 ## Other things coming in 2016
 - Scala.js -> 0.6.9
@@ -31,8 +31,8 @@
 
 ## Dot: Dependent object tracking
 
-Finally have proven foundation for scala. DOT calculus talks about a minimal
-lungauge subset that:
+Finally have proven foundation for Scala. DOT calculus talks about a minimal
+language subset that:
 
 - can prove formally
 - can encode the rest of the language with it
@@ -42,8 +42,8 @@ Opens the door to language work with much better confidence in the future.
 
 #### Why? Type Soundness:
 
-- if a term t has type T, and eval terminates: the result will
-   be a blue v of T.
+> if a term t has type T, and eval terminates: the result will
+>   be a blue v of T.
 
 ## Dotty:  a working name for the new scala compiler
 
@@ -56,7 +56,7 @@ Opens the door to language work with much better confidence in the future.
 - ~45kloc (compared to current compiler 75kloc)
 - 2x faster than current (nsc) compiler
 
-### Why dotty improtant?
+### Why dotty important?
 
 - cleaner compiler gives a way to move forward faster
 - evolve language more confidently
@@ -65,48 +65,48 @@ Opens the door to language work with much better confidence in the future.
 
 ### What is the scala "character"
 
-- Scala Concepts:
+- Scala's Concepts:
   - functions
   - classes and objects
   - strict eval
   - local type inference
   - implicits
     - other languages move in the same space: example ocaml just added implicits
-    - kotlin, switf also add similar features
+    - kotlin, swift also add similar features
 
 ### Goals of the further scala improvements
 
-1. Deepen the sythetis of functional and modular programming
+1. Deepen the synthesis of functional and modular programming
 2. Improve the connection of Scala with its theoretical foundations
 3. Improve the guarantees of the type system
 4. But stays simple and approachable
 
 ### Dotty: Dropped features
 
-- PRocedure syntax
+- Procedure syntax
 - DelayedInit
 - Macros: current implementation is based on java reflection and it sucks.
-- Early initializers: class C extends { val = e } with D
-- Existential types: C[U] forSome { type U }
+- Early initializers: class C extends `{ val = e } with D`
+- Existential types: `C[U] forSome { type U }`
 - General type projection
-  - T # X
-  - showd to be unsound
-  - projection C#X from class types C still available
+  - `T # X`
+  - showed to be unsound
+  - projection `C # X` from class types C still available
 
 ### Dotty: new fatures
 
-- Intersection types: replaces "T with U"
-  - T & U
+- Intersection types:`T & U`
+  - replaces `T with U`
   - is commutative (!!!)
-- Union types: T | U
-  - avoid exploiding huge lubs
+- Union types: `T | U`
+  - avoid exploding huge lubs
 - Function arity adaptation
-  - paris.map((x,u) => x + u)
+  - `pairs.map((x,u) => x + u)` instead of have to type 'case' in some cases.
 - trait params (make them more like classes)
 - static methods and fields
-  - @static (uses some underlying JVM magic for statics and may be more
+  - `@static` (uses some underlying JVM magic for statics and may be more
     performant than normal object methods)
-- multiverasl Equality
+- multiversal Equality
   - type-safe ==, !=
 - named type params
   - trait Map[type Key, type Value]
@@ -118,13 +118,12 @@ Opens the door to language work with much better confidence in the future.
 
 - Type system
   - influenced by DOT
-  - better integration of type reinforcments
+  - better integration of type reinforcements
 - Type inference
-  - subtyping constraint solver
-  - infrence is simple to specify
+  - sub typing constraint solver
+  - inference is simple to specify
 - Implicit search
   - faster search algo
-  - better behaved for contr
 - Value classes
 
 ### ADvances in tooling
@@ -149,11 +148,11 @@ Opens the door to language work with much better confidence in the future.
   - meta uses quasi quotes for matching an construction
   - blackbox and annotation macros
   - WHY?
-    - sipler
-    - feweer depndences
+    - simpler
+    - fewer dependences
     - safer: sandbox
-    - restrict synctactic freedom
-- Implicit Function TYpes
+    - restrict syntactic freedom
+- Implicit Function Types
 
   ```
      type ctxs =  implicit context => s
@@ -164,42 +163,43 @@ Opens the door to language work with much better confidence in the future.
 
   - why?
     - allows abstraction over implicit parmas
-    - eliminaties boiler plate
+    - eliminates boiler plate
 - Effect system
   - implicit capabilities
   - new arrows:
-    - A => B impure function
-    - A -> B pure
+    - `A => B` impure function
+    - `A -> B` pure
   - WHY?
     - effects checking is very much in demand
   - can do better than monads
   - implicits are a natural fit
 - Nullable types as union types
-  - T? = T  | Null
-  - types dont have null by default
-  - values coming from java get ? automatically: System.out: PrintStream?
-  - null dereferecning is an 'effect'
-  - System.out.println is ok in impure code
+  - `T? = T  | Null`
+  - types don't have null by default
+  - values coming from Java get ? Automatically: `System.out: PrintStream?`
+  - null dereferencing is an 'effect'
+  - `System.out.println` is OK in impure code
   - Why?
     - null poses unsoundness problems
     - null-safety is conceptually easy once you have union types and effects
 - Generic programming
   - scrap your boilerplate
-  - product of sum interpreetation
+  - product of sum interpretation
   - Tuples are HLists, but implemented more more efficiently
     - (S, T, U) = (S, (T, U))
 - Better records
-  - analogue of tuples but with lables
+  - analogue of tuples but with labels
 
 ## What about the guardrails
 
 - Scala premise: trust devs to do the right thing
-- What if they dont?
+- What if they don't?
 - Can we agree on what the right thing is?
 
 ## Read this
 
-- Strategic scala style: Principle of least power
+- Strategic scala style: [Principle of least
+  power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
   - use the least powerful language feature to achieve the thing
 
 - Make implicit conversion (from A to B) a style error if:
@@ -208,10 +208,10 @@ Opens the door to language work with much better confidence in the future.
 
 ### Flexibility: blessing or a curse?
 
-ie: xs.map(f) or xs map f
-Proposal: @infix annotation to indicate that operator is supposed to be used
+i.e.: `xs.map(f)` or `xs map f`
+Proposal: `@infix` annotation to indicate that operator is supposed to be used
 infix to let compiler warn you
 
-### Add alpanum for Symbolic operators
+### Add alphanumeric for Symbolic operators
 
- -  @infix("append") def += (elem: T)
+ -  `@infix("append") def += (elem: T)`
