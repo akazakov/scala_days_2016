@@ -24,7 +24,11 @@
   - [What about Lightbend](#what-about-lightbend)
 - [First projects](#first-projects)
   - [Package index or something like that.](#package-index-or-something-like-that)
-  - [Demo](#demo)
+  - [Separate core and the platform](#separate-core-and-the-platform)
+  - [ScalaFiddle](#scalafiddle)
+  - [SIP/SLIP process](#sipslip-process)
+- [Join and HELP!](#join-and-help)
+  - [Contacts](#contacts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -146,5 +150,32 @@
 - Status: crawled maven and collected all + connected to Github
 - Next: Put some nice UI
 
-## Demo
+## Separate core and the platform
 
+- What Martin talked about yesterday
+- Currently under discussion
+
+## ScalaFiddle
+
+- Like JsFiddle
+- REPL in browser
+- Help learn Scala online
+- Allow embedding executable scala snippets into webpages
+- Help needed! Contribute please!
+
+## SIP/SLIP process
+
+- Improve governance
+
+# Join and HELP!
+
+- Contribute time or money!
+- More valuable is ideas and pull requests!
+- Get involved in OS: more visibility and helps your hiring effort
+- Allow your employees to spend some time working on OS Scala ecosystem
+- Get in touch!
+
+## Contacts
+
+- [gitter.im/scala/center](https://gitter.im/scala/center)
+- scala.center@epfl.ch
