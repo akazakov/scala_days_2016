@@ -25,8 +25,11 @@
 
 # Domain driven design
 
+[github.com/WadeWaldron/scaladays2016](https://github.com/WadeWaldron/scaladays2016)
+
 [blog
 post](http://boldradius.com/blog-post/VCRYijIAAHhescgX/domain-driven-design-through-onion-architecture)
+
 Usually associated with:
 
 - CQRS
